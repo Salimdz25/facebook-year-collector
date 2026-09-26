@@ -13,6 +13,10 @@ class WindowTests(unittest.TestCase):
         self.assertEqual(choose_window(date(2025, 12, 31), 3, 2025),
                          (date(2025, 12, 31), date(2026, 1, 1)))
 
+    def test_ten_day_window(self):
+        self.assertEqual(choose_window(date(2025, 1, 1), 10, 2025),
+                         (date(2025, 1, 1), date(2025, 1, 11)))
+
     def test_utc_format(self):
         self.assertEqual(iso_utc(date(2025, 1, 1)), "2025-01-01T00:00:00Z")
 
