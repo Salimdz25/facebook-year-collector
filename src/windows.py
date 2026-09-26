@@ -7,8 +7,8 @@ def choose_window(start: date, width: int, year: int) -> tuple[date, date]:
     first_day, after_last_day = date(year, 1, 1), date(year + 1, 1, 1)
     if not first_day <= start < after_last_day:
         raise ValueError("Date outside selected year")
-    if width not in (1, 2, 3):
-        raise ValueError("Window width must be 1, 2, or 3 days")
+    if not 1 <= width <= 31:
+        raise ValueError("Window width must be 1 to 31 days")
     return start, min(start + timedelta(days=width), after_last_day)
 
 
