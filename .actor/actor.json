@@ -1,0 +1,9 @@
+{
+  "actorSpecification": 1,
+  "name": "facebook-year-hourly-collector",
+  "title": "Facebook page yearly hourly collector",
+  "description": "Collects posts from a public Facebook page in successive date windows.",
+  "version": "0.2",
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile"
+}
