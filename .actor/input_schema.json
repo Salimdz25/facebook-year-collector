@@ -1,0 +1,30 @@
+{
+  "title": "Facebook posts by year",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "facebookUrl": {
+      "title": "Facebook page URL",
+      "type": "string",
+      "description": "Public Facebook page URL, e.g. https://www.facebook.com/UC3SB",
+      "editor": "textfield",
+      "prefill": "https://www.facebook.com/UC3SB"
+    },
+    "year": {
+      "title": "Year to collect",
+      "type": "integer",
+      "description": "Calendar year, from January 1 to December 31 (UTC).",
+      "default": 2025,
+      "minimum": 2004,
+      "maximum": 2100
+    },
+    "resultsLimit": {
+      "title": "Maximum posts per scraper call",
+      "type": "integer",
+      "description": "If this number is reached, the date window is reduced.",
+      "default": 50,
+      "minimum": 1
+    }
+  },
+  "required": ["facebookUrl"]
+}
